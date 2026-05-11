@@ -10,7 +10,7 @@ use App\Models\Wallet;
 class WalletController extends Controller
 {
     public function index() {
-        $user = Auth::user();
+        $user = Auth::user();   
         $wallets = $user->wallets;
         return response()->json($wallets);
     }
